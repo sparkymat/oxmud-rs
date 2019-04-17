@@ -1,2 +1,9 @@
 well well 
 quit
+motd
+quit
+motd
+mto
+motd
+quit
+help

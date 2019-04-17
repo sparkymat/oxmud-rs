@@ -1,9 +1,12 @@
+mod commands;
 extern crate rustyline;
 
 use rustyline::error::ReadlineError;
 use rustyline::Editor;
 
 fn main() {
+    commands::display_motd();
+
     let mut editor = Editor::<()>::new();
     if editor.load_history("history.txt").is_err() {
         println!("No history");
@@ -17,7 +20,13 @@ fn main() {
                 if line.trim() == "quit" {
                     break;
                 }
-                println!("Thank you for {}", line);
+
+                match line.trim() {
+                    "quit" => { break; },
+                    "help" => { commands::display_help(); },
+                    "motd" => { commands::display_motd(); },
+                    _      => { println!("Error: unrecognized command") },
+                }
             },
             Err(ReadlineError::Interrupted) => {
                 println!("Enter 'quit' to exit")
