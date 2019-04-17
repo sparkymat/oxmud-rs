@@ -1,0 +1,8 @@
+[package]
+name = "oxmud"
+version = "0.1.0"
+authors = ["Ajith Hussain <csy0013@googlemail.com>"]
+edition = "2018"
+
+[dependencies]
+rustyline = "3.0.0"
