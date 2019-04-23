@@ -1,8 +1,7 @@
 use std::fs;
 
 pub fn display_motd() {
-    let motd = fs::read_to_string("data/motd.txt");
-    match motd {
+    match fs::read_to_string("data/motd.txt") {
 	Ok(motd) => {
             println!("{}", motd);
         },
@@ -13,8 +12,7 @@ pub fn display_motd() {
 }
 
 pub fn display_help() {
-    let help = fs::read_to_string("data/help.txt");
-    match help {
+    match fs::read_to_string("data/help.txt") {
         Ok(help) => {
             println!("{}", help);
         },

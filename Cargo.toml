@@ -6,3 +6,6 @@ edition = "2018"
 
 [dependencies]
 rustyline = "3.0.0"
+diesel = { version = "0.16.0", features = ["sqlite"] }
+diesel_codegen = { version = "0.16.0", features = ["sqlite"] }
+dotenv = "0.13.0"

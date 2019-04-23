@@ -7,3 +7,5 @@ mto
 motd
 quit
 help
+quit
+help
